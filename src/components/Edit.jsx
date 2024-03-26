@@ -13,7 +13,7 @@ function Edit() {
     })
 
     useEffect(() => {
-        axios.get('http://localhost:3000/add_student/' + id)
+        axios.get('https://student-server-2.onrender.com/add_student/' + id)
             .then(res => {
                console.log(res)
             setValues({
@@ -30,7 +30,7 @@ function Edit() {
 
       const handleEdit =(e) =>{
         e.preventDefault();
-        axios.put('http://localhost:3000/add_student/'+id,values)
+        axios.put('https://student-server-2.onrender.com/add_student/'+id,values)
         .then(res =>{
           
             navigate('/dash/list');
